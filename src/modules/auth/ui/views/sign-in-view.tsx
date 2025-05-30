@@ -19,7 +19,7 @@ import {
 import { useForm } from "react-hook-form";
 import { OctagonAlertIcon } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 
@@ -30,7 +30,6 @@ const formSchema = z.object({
   }),
 });
 export const SignInView = () => {
-  const router = useRouter();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<z.infer<typeof formSchema>>({
@@ -48,11 +47,11 @@ export const SignInView = () => {
       {
         email: data.email,
         password: data.password,
+        callbackURL: "/",
       },
       {
         onSuccess: () => {
           setPending(false);
-          router.push("/");
         },
         onError: ({ error }) => {
           setPending(false);
@@ -126,11 +125,27 @@ export const SignInView = () => {
                   </span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  <Button variant="outline" type="button" className="w-full">
-                    Google
+                  <Button
+                    disabled={pending}
+                    onClick={() =>
+                      authClient.signIn.social({ provider: "google" })
+                    }
+                    variant="outline"
+                    type="button"
+                    className="w-full cursor-pointer"
+                  >
+                    <FaGoogle />
                   </Button>
-                  <Button variant="outline" type="button" className="w-full">
-                    Github
+                  <Button
+                    disabled={pending}
+                    onClick={() =>
+                      authClient.signIn.social({ provider: "github" })
+                    }
+                    variant="outline"
+                    type="button"
+                    className="w-full cursor-pointer"
+                  >
+                    <FaGithub />
                   </Button>
                 </div>
                 <div className="text-center text-sm">
