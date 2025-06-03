@@ -22,7 +22,5 @@ export const AgentsViewLoading = () => {
 };
 
 export const ErrorViewLoading = () => {
-  return (
-    <ErrorState title="Error" description="Something went wrong" />
-  );
+  return <ErrorState title="Error" description="Something went wrong" />;
 };
