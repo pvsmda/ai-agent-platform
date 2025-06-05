@@ -22,7 +22,7 @@ export default function RootLayout({
     <NuqsAdapter>
       <TRPCReactProvider>
         <html lang="en">
-          <body className={`${inter} antialiased`}>
+          <body className={`${inter} antialiased `}>
             <Toaster />
             {children}
           </body>

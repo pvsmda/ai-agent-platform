@@ -135,6 +135,9 @@ export const SignInView = () => {
                     className="w-full cursor-pointer"
                   >
                     <FaGoogle />
+                    <span className="text-sm text-muted-foreground">
+                      Google
+                    </span>
                   </Button>
                   <Button
                     disabled={pending}
@@ -146,6 +149,9 @@ export const SignInView = () => {
                     className="w-full cursor-pointer"
                   >
                     <FaGithub />
+                    <span className="text-sm text-muted-foreground">
+                      Github
+                    </span>
                   </Button>
                 </div>
                 <div className="text-center text-sm">
