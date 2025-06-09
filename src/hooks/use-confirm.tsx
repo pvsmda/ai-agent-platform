@@ -53,7 +53,7 @@ export const useConfirm = (
             variant="destructive"
             className="w-full lg:w-auto bg"
           >
-            Confirm
+            Remove
           </Button>
         </div>
       </ResponsiveDialog>
