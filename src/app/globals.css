@@ -51,7 +51,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.5 0.1 250);
+  --primary: oklch(0.6 0.2 290);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -68,14 +68,18 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.35 0.08 250); /* Azul escuro */
-  --sidebar-foreground: oklch(0.9 0.02 250); /* Azul claro para texto */
-  --sidebar-primary: oklch(0.4 0.07 250); /* Azul médio */
-  --sidebar-primary-foreground: oklch(0.98 0 0); /* Branco */
-  --sidebar-accent: oklch(0.5 0.1 250); /* Azul mais vibrante */
-  --sidebar-accent-foreground: oklch(1 0 0); /* Branco */
-  --sidebar-border: oklch(0.8 0.02 250); /* Azul claro para borda */
-  --sidebar-ring: oklch(0.6 0.04 250); /* Azul médio para foco */
+  --sidebar: oklch(0.25 0.1 290); /* fundo escuro roxo */
+  --sidebar-foreground: oklch(
+    0.95 0.02 290
+  ); /* texto claro sobre fundo escuro */
+  --sidebar-primary: oklch(0.6 0.2 290); /* roxo médio para botões principais */
+  --sidebar-primary-foreground: oklch(0.98 0.02 290); /* texto quase branco */
+  --sidebar-accent: oklch(
+    0.4 0.15 290
+  ); /* roxo mais suave para elementos secundários */
+  --sidebar-accent-foreground: oklch(0.98 0.02 290); /* contraste claro */
+  --sidebar-border: oklch(0.98 0.02 290 / 10%); /* borda translúcida */
+  --sidebar-ring: oklch(0.7 0.2 290); /* destaque/anel roxo mais claro */
 }
 
 .dark {
